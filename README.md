@@ -17,12 +17,19 @@ JavaScript: For interactivity and dynamic content.
 ## Folder Structure
 netflix-clone/
 |-- index.html
+
 |-- css/
+
 |   |-- styles.css
+
 |-- js/
+
 |   |-- script.js
+
 |-- assets/
+
 |   |-- images/
+
 |   |-- videos/
 ## Future Enhancements
 Add a backend to fetch and store real-time data.
