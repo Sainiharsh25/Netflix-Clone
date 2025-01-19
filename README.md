@@ -1,44 +1,150 @@
-# Netflix-Clone
-A Netflix-inspired web application created using HTML, CSS, and JavaScript. This project replicates the visual design of Netflix and includes functionality to display movies, TV shows, and other content categories.
+# Netflix Clone
+A fully responsive Netflix clone built using the MERN stack (MongoDB, Express.js, React.js, Node.js) to replicate core features of the popular streaming platform.
+
 ## Features
-Home Page: A visually appealing home page showcasing featured content.
 
-Responsive Design: Fully responsive layout that adapts to various screen sizes.
+- User authentication (Sign up, Log in, and Log out)
+- Browse movies and TV shows
+- Search for titles
+- View details and trailers of movies/TV shows
+- Responsive UI for mobile and desktop
+- Admin dashboard for content management
+- Subscription plans with payment integration (optional)
 
-Category Browsing: Content organized into categories like Trending, Top Rated, and more.
-
-Dynamic Interaction: Interactive UI elements for a smooth user experience.
 ## Technologies Used
-HTML: For structuring the web pages.
 
-CSS: For styling and layout.
+### Frontend
+- React.js
+- Redux Toolkit (for state management)
+- Axios
+- Tailwind CSS / Bootstrap (Optional: Specify CSS framework used)
 
-JavaScript: For interactivity and dynamic content.
-## Folder Structure
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose
+
+### Authentication
+- Firebase Authentication / JSON Web Tokens (JWT)
+
+## Installation
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- Node.js (v16 or higher recommended)
+- MongoDB (local instance or cloud, e.g., MongoDB Atlas)
+- Git
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/netflix-clone.git
+   cd netflix-clone
+   ```
+
+2. Install dependencies for both backend and frontend:
+   ```bash
+   # Install backend dependencies
+   cd backend
+   npm install
+
+   # Install frontend dependencies
+   cd ../frontend
+   npm install
+   ```
+
+3. Set up environment variables:
+
+   Create a `.env` file in the `backend` directory and add the following:
+   ```env
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   TMDB_API_KEY=your_tmdb_api_key
+   ```
+
+4. Start the development servers:
+   ```bash
+   # Start the backend server
+   cd backend
+   npm start
+
+   # Start the frontend server
+   cd ../frontend
+   npm start
+   ```
+
+5. Open your browser and navigate to:
+   - Frontend: `http://localhost:3000`
+   - Backend API: `http://localhost:5000`
+
+## Project Structure
+
+```
 netflix-clone/
-|-- index.html
+├── backend/
+│   ├── config/       # Configuration files (e.g., database, JWT)
+│   ├── controllers/  # API route controllers
+│   ├── models/       # MongoDB models
+│   ├── routes/       # API routes
+│   ├── middleware/   # Middleware (e.g., authentication)
+│   └── server.js     # Entry point for the backend
+├── frontend/
+│   ├── public/       # Static files
+│   ├── src/
+│   │   ├── components/ # React components
+│   │   ├── pages/      # React pages (e.g., Home, Browse, Search)
+│   │   ├── context/    # Context API for state management
+│   │   └── App.js      # Main React app file
+├── README.md
+└── package.json      # Root package.json for the project
+```
 
-|-- css/
+## API Endpoints
 
-|   |-- styles.css
+### User Routes
+- `POST /api/users/register` - Register a new user
+- `POST /api/users/login` - Log in a user
 
-|-- js/
+### Movie Routes
+- `GET /api/movies` - Get all movies
+- `GET /api/movies/:id` - Get movie details by ID
 
-|   |-- script.js
+### Admin Routes
+- `POST /api/admin/add` - Add new movies/TV shows (Admin only)
+- `DELETE /api/admin/:id` - Delete movies/TV shows (Admin only)
 
-|-- assets/
-
-|   |-- images/
-
-|   |-- videos/
 ## Future Enhancements
-Add a backend to fetch and store real-time data.
 
-Implement user authentication for personalized experiences.
+- Add user profiles and personalized recommendations
+- Implement a payment gateway for subscription plans
+- Enable content downloads for offline viewing
+- Multi-language support
 
-Enable video playback functionality.
+## Contributing
 
-Add a search feature for browsing content.
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to contact me if you have any questions or suggestions. Happy coding! 🎬
+
 ## Contact
 For any questions or feedback, please feel free to contact me:
 
